@@ -19,12 +19,12 @@ export ANDROID_NDK=$HOME/android-ndk-r21e
 
 输出结果以一个空格区分, 以便外部脚本过滤, 已集成的功能如下:
 
-1. `jpgsize <input file>`返回图像的大小, 用于准确的小图检测, 如以下返回:
+1. `jpgsize <input file>`返回图像的大小, 用于准确的小图检测, 支持管道输入, 如以下返回:
 ```
 ( width height pixels size )=( 3072 4096 12582912 2289760 )
 ```
 
-2. `jpgchannel <input file>`返回图像rgb通道统计, 用于偏色判断, 如紫图/绿图/全黑图/全白图判断, 如以下返回:
+2. `jpgchannel <input file>`返回图像rgb通道统计, 用于偏色判断, 如紫图/绿图/全黑图/全白图判断, 支持管道输入, 如以下返回:
 ```
 ( r g b )=( 34.474852 33.343373 35.255396 )
 ```
