@@ -1,0 +1,11 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 3.5)
+
+ADD_DEFINITIONS("-Wall")
+ADD_DEFINITIONS("-fPIC")
+ADD_DEFINITIONS("-Wl,-lm")
+ADD_DEFINITIONS("-Wl,--whole-archive")
+SET(CMAKE_CXX_FLAGS "-std=c++17 -pthread -Wall -pie -fPIC -Wl,-Bsymbolic -lz -lc -ldl -lm -D__STDINT_LIMITS -D__STDINT_MACROS -D__ANDROID__ -DANDROID")
+SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR})
+
+ADD_EXECUTABLE(jpgsize jpgsize.cpp)
+ADD_EXECUTABLE(jpgchannel jpgchannel.cpp)
